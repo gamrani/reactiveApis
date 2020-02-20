@@ -78,23 +78,7 @@ public class ProductHandler {
                                 .body(productService.saveNewProduct(product), Product.class)
                 ).switchIfEmpty(notFound);
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
     public Mono<ServerResponse> saveProduct(ServerRequest request) {
         Mono<Product> productMono = request.bodyToMono(Product.class);
 
